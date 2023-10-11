@@ -1,0 +1,22 @@
+package ejercicio02;
+
+import java.io.IOException;
+
+public class ConstructorProcesos {
+	public void ejecutarCalc() {
+	ProcessBuilder p=new ProcessBuilder("calc");
+		try {
+			p.start();
+		} catch (IOException e) {
+			// TODO: handle exception
+		}
+	}
+	public void ejecutarBloc() {
+		ProcessBuilder p=new ProcessBuilder("notepad");
+		try {
+			p.start();
+		} catch (IOException e) {
+			// TODO: handle exception
+		}
+	}
+}

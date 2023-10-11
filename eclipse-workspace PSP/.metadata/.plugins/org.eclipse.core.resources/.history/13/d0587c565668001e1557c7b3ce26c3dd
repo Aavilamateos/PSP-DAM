@@ -1,0 +1,24 @@
+package ejercicio01;
+
+
+public class Prueba_Process_builder {
+	protected ConstructorProcesos cP;
+	public static void main(String[] args) {
+		
+		
+		System.out.println("Finalizado");
+		
+	}
+	public void ejecutarBloc() {
+		String ruta="C:\\WINDOWS\\system32\\notepad.exe";
+		cP=new ConstructorProcesos();
+		cP.ejecutar(ruta);
+	}
+	public void ejecutarCalc() {
+		
+		String ruta="C:\\Users\\aavila3794>calc";
+		cP=new ConstructorProcesos();
+		cP=new ProcessBuilder("calc").start();
+		cP.ejecutar(ruta);
+	}
+}

@@ -1,0 +1,63 @@
+package pruebas;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+
+public class Prueba1 {
+
+	private JFrame frmPruebaPsp;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Prueba1 window = new Prueba1();
+					window.frmPruebaPsp.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Prueba1() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmPruebaPsp = new JFrame();
+		frmPruebaPsp.setTitle("Prueba 1 PSP");
+		frmPruebaPsp.setBounds(100, 100, 450, 300);
+		frmPruebaPsp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmPruebaPsp.getContentPane().setLayout(null);
+		
+		JButton btnNewButton_1 = new JButton("Bloc de Notas");
+		btnNewButton_1.setBackground(new Color(128, 255, 0));
+		btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\aavila3794\\Pictures\\Screenpresso\\2023-09-27_20h41_29.png"));
+		btnNewButton_1.setBounds(238, 84, 140, 78);
+		frmPruebaPsp.getContentPane().add(btnNewButton_1);
+		
+		JButton btnNewButton = new JButton("Calculadora");
+		btnNewButton.setBackground(new Color(128, 255, 0));
+		btnNewButton.setForeground(new Color(0, 0, 0));
+		btnNewButton.setIcon(new ImageIcon("C:\\Users\\aavila3794\\Pictures\\Screenpresso\\2023-09-27_20h30_25.png"));
+		btnNewButton.setBounds(26, 84, 147, 78);
+		frmPruebaPsp.getContentPane().add(btnNewButton);
+	}
+}

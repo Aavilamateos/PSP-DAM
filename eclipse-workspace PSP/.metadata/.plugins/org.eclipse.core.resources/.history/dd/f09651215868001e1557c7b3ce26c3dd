@@ -1,0 +1,13 @@
+package ejercicioBlocYCalc;
+
+public class ConstructorProcesos {
+	public void ejecutar() {
+		ProcessBuilder pb;
+		try {
+			pb=new ProcessBuilder("calc");
+			pb.start();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

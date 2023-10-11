@@ -1,0 +1,21 @@
+package ejercicio01;
+
+import java.io.IOException;
+
+public class Prueba_Process_builder {
+	public static void main(String[] args) {
+		
+		
+		System.out.println("Finalizado");
+		
+	}
+	public void ejecutarBloc() throws IOException {
+			ProcessBuilder p=new ProcessBuilder("notepad");
+			p.start();
+	}
+	public void ejecutarCalc() {
+		
+		ProcessBuilder p=new ProcessBuilder("calc");
+		p.start();
+	}
+}

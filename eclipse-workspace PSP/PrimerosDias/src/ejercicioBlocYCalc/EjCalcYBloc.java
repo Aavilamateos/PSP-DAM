@@ -1,0 +1,85 @@
+package ejercicioBlocYCalc;
+
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.ImageIcon;
+import java.awt.Color;
+
+public class EjCalcYBloc {
+
+	private JFrame frmPruebaPsp;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					EjCalcYBloc window = new EjCalcYBloc();
+					window.frmPruebaPsp.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 * @throws IOException 
+	 */
+	public EjCalcYBloc()  {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 * @throws IOException 
+	 */
+	private void initialize() {
+		frmPruebaPsp = new JFrame();
+		frmPruebaPsp.setTitle("Prueba 1 PSP");
+		frmPruebaPsp.setBounds(100, 100, 450, 300);
+		frmPruebaPsp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmPruebaPsp.getContentPane().setLayout(null);
+
+		JButton btnBloc = new JButton("Bloc de Notas");
+		btnBloc.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ConstructorProcesos p = new ConstructorProcesos();
+				p.ejecutarNotepad();
+			}
+		});
+		btnBloc.setBackground(new Color(128, 255, 0));
+		btnBloc.setIcon(new ImageIcon("C:\\Users\\aavila3794\\Pictures\\Screenpresso\\2023-09-27_20h41_29.png"));
+		btnBloc.setBounds(238, 84, 147, 78);
+		frmPruebaPsp.getContentPane().add(btnBloc);
+
+		JButton btnCalc = new JButton("Calculadora");
+		btnCalc.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ConstructorProcesos p = new ConstructorProcesos();
+				p.ejecutarCalc();
+			}
+		});
+		btnCalc.setBackground(new Color(128, 255, 0));
+		btnCalc.setForeground(new Color(0, 0, 0));
+		btnCalc.setIcon(new ImageIcon("C:\\Users\\aavila3794\\Pictures\\Screenpresso\\2023-09-27_20h30_25.png"));
+		btnCalc.setBounds(26, 84, 147, 78);
+		frmPruebaPsp.getContentPane().add(btnCalc);
+		
+
+		
+
+		
+		
+		
+	}
+
+}
